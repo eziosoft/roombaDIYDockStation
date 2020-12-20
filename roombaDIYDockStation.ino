@@ -38,18 +38,17 @@ void setup() {
 
   DDRD = DDRD | B11111100;// this is safer as it sets pins 2 to 7 as outputs
   // without changing the value of pins 0 & 1, which are RX & TX
+}
 
-  void loop() {
-    for (int i = 0; i < 32; i++)
-    {
-      byte b = 0;
-      if (green[i] == 1)  b = b |  B10000000;
-      if (red[i] == 1)    b = b |  B01000000;
-      if (field[i] == 1)  b = b |  B00100000;
-      PORTD = b;// sets digital pins 5,6,7
-    }
+void loop() {
+  for (int i = 0; i < 32; i++)
+  {
+    byte b = 0;
+    if (green[i] == 1)  b = b |  B10000000;
+    if (red[i] == 1)    b = b |  B01000000;
+    if (field[i] == 1)  b = b |  B00100000;
+    PORTD = b;// sets digital pins 5,6,7
     delayMicroseconds(1000);
   }
-
   delay(100);
 }
