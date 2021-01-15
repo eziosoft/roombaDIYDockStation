@@ -1,4 +1,4 @@
-# roombaDIYDockStation
+# iRobot/Roomba DIY Docking Station
 DIY docking and charging station for roomba (tested with model 650)
 STL files : https://www.thingiverse.com/thing:4685245
 
